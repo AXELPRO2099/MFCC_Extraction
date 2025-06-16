@@ -1,0 +1,1223 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Wed Jun 11 12:46:34 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 531.180 ; gain = 201.238
+Command: read_checkpoint -auto_incremental -incremental C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/utils_1/imports/synth_1/codec.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/utils_1/imports/synth_1/codec.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 20204
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 992.336 ; gain = 448.840
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/top.sv:2]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/top.sv:92]
+INFO: [Synth 8-6157] synthesizing module 'codec' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/codec.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'codec' (0#1) [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/codec.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'preprocessing' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/preprocessing.sv:8]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/preprocessing.sv:44]
+INFO: [Synth 8-6155] done synthesizing module 'preprocessing' (0#1) [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/preprocessing.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'fft_1' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/fft_1.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'fft_1' (0#1) [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/fft_1.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'fft_2' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/fft_2.sv:2]
+WARNING: [Synth 8-6090] variable 'idx' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/fft_2.sv:177]
+INFO: [Synth 8-6155] done synthesizing module 'fft_2' (0#1) [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/fft_2.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'power' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/power.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'power' (0#1) [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/power.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'mel_filter_bank' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'mel_filter_bank' (0#1) [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/top.sv:2]
+WARNING: [Synth 8-7137] Register acc_0_reg in module preprocessing has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/preprocessing.sv:47]
+WARNING: [Synth 8-7137] Register acc_1_reg in module preprocessing has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/preprocessing.sv:48]
+WARNING: [Synth 8-7137] Register acc_2_reg in module preprocessing has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/preprocessing.sv:49]
+WARNING: [Synth 8-7137] Register acc_3_reg in module preprocessing has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/preprocessing.sv:50]
+WARNING: [Synth 8-7137] Register acc_4_reg in module preprocessing has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/preprocessing.sv:51]
+WARNING: [Synth 8-6014] Unused sequential element idx_reg was removed.  [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/fft_2.sv:59]
+WARNING: [Synth 8-87] always_comb on 'mel_sptg_reg[0]' did not result in combinational logic [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-87] always_comb on 'mel_sptg_reg[1]' did not result in combinational logic [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-87] always_comb on 'mel_sptg_reg[2]' did not result in combinational logic [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-87] always_comb on 'mel_sptg_reg[3]' did not result in combinational logic [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-87] always_comb on 'mel_sptg_reg[4]' did not result in combinational logic [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-87] always_comb on 'mel_sptg_reg[5]' did not result in combinational logic [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-87] always_comb on 'mel_sptg_reg[6]' did not result in combinational logic [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-87] always_comb on 'mel_sptg_reg[7]' did not result in combinational logic [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-87] always_comb on 'mel_sptg_reg[8]' did not result in combinational logic [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-87] always_comb on 'mel_sptg_reg[9]' did not result in combinational logic [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-87] always_comb on 'mel_sptg_reg[10]' did not result in combinational logic [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-87] always_comb on 'mel_sptg_reg[11]' did not result in combinational logic [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-87] always_comb on 'mel_sptg_reg[12]' did not result in combinational logic [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-87] always_comb on 'mel_sptg_reg[13]' did not result in combinational logic [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-87] always_comb on 'mel_sptg_reg[14]' did not result in combinational logic [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-87] always_comb on 'mel_sptg_reg[15]' did not result in combinational logic [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-87] always_comb on 'mel_sptg_reg[16]' did not result in combinational logic [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-87] always_comb on 'mel_sptg_reg[17]' did not result in combinational logic [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-87] always_comb on 'mel_sptg_reg[18]' did not result in combinational logic [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-87] always_comb on 'mel_sptg_reg[19]' did not result in combinational logic [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-87] always_comb on 'mel_sptg_reg[20]' did not result in combinational logic [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-87] always_comb on 'mel_sptg_reg[21]' did not result in combinational logic [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-87] always_comb on 'mel_sptg_reg[22]' did not result in combinational logic [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-87] always_comb on 'mel_sptg_reg[23]' did not result in combinational logic [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-87] always_comb on 'mel_sptg_reg[24]' did not result in combinational logic [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-87] always_comb on 'mel_sptg_reg[25]' did not result in combinational logic [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-6014] Unused sequential element codec_start_reg was removed.  [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/top.sv:77]
+WARNING: [Synth 8-6014] Unused sequential element preprocessing_start_reg was removed.  [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/top.sv:78]
+WARNING: [Synth 8-6014] Unused sequential element preprocessing_done_reg was removed.  [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/top.sv:83]
+WARNING: [Synth 8-3848] Net mel_in[110] in module/entity top does not have driver. [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/top.sv:46]
+WARNING: [Synth 8-3848] Net mel_in[111] in module/entity top does not have driver. [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/top.sv:46]
+WARNING: [Synth 8-7129] Port data_in[0][15] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[0][14] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[0][13] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[0][12] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[0][11] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[0][10] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[0][9] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[0][8] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[0][7] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[0][6] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[0][5] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[0][4] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[0][3] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[0][2] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[0][1] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[0][0] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[1][15] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[1][14] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[1][13] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[1][12] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[1][11] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[1][10] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[1][9] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[1][8] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[1][7] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[1][6] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[1][5] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[1][4] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[1][3] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[1][2] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[1][1] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[1][0] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[2][15] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[2][14] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[2][13] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[2][12] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[2][11] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[2][10] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[2][9] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[2][8] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[2][7] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[2][6] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[2][5] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[2][4] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[2][3] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[2][2] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[2][1] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[2][0] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[3][15] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[3][14] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[3][13] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[3][12] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[3][11] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[3][10] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[3][9] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[3][8] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[3][7] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[3][6] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[3][5] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[3][4] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[3][3] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[3][2] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[3][1] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[3][0] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[4][15] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[4][14] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[4][13] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[4][12] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[4][11] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[4][10] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[4][9] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[4][8] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[4][7] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[4][6] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[4][5] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[4][4] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[4][3] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[4][2] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[4][1] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[4][0] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[5][15] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[5][14] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[5][13] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[5][12] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[5][11] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[5][10] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[5][9] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[5][8] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[5][7] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[5][6] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[5][5] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[5][4] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[5][3] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[5][2] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[5][1] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[5][0] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[6][15] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[6][14] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[6][13] in module mel_filter_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[6][12] in module mel_filter_bank is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 1425.312 ; gain = 881.816
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 1425.312 ; gain = 881.816
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 1425.312 ; gain = 881.816
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Device 21-9227] Part: xc7z020clg400-1 does not have CEAM library.
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'preprocessing'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'top'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               00
+                 iSTATE0 |                              010 |                               01
+                 iSTATE1 |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'preprocessing'
+WARNING: [Synth 8-327] inferring latch for variable 'mel_sptg_reg[0]' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'mel_sptg_reg[1]' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'mel_sptg_reg[2]' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'mel_sptg_reg[3]' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'mel_sptg_reg[4]' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'mel_sptg_reg[5]' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'mel_sptg_reg[6]' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'mel_sptg_reg[7]' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'mel_sptg_reg[8]' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'mel_sptg_reg[9]' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'mel_sptg_reg[10]' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'mel_sptg_reg[11]' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'mel_sptg_reg[12]' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'mel_sptg_reg[13]' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'mel_sptg_reg[14]' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'mel_sptg_reg[15]' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'mel_sptg_reg[16]' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'mel_sptg_reg[17]' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'mel_sptg_reg[18]' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'mel_sptg_reg[19]' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'mel_sptg_reg[20]' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'mel_sptg_reg[21]' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'mel_sptg_reg[22]' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'mel_sptg_reg[23]' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'mel_sptg_reg[24]' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'mel_sptg_reg[25]' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/mel_filter_bank.sv:97]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                           000001 |                             0000
+                    FFT1 |                           000010 |                             0001
+                    FFT2 |                           000100 |                             0010
+                   POWER |                           001000 |                             0011
+                MEL_bank |                           010000 |                             0100
+                    DONE |                           100000 |                             0101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'top'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 1538.961 ; gain = 995.465
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   5 Input   33 Bit       Adders := 32    
+	   2 Input   25 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 256   
+	   4 Input   16 Bit       Adders := 1     
+	   3 Input   16 Bit       Adders := 3     
+	   5 Input   16 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 1     
+	   3 Input    9 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 1     
++---XORs : 
+	   4 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 17    
+	               28 Bit    Registers := 26    
+	               25 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               18 Bit    Registers := 14    
+	               16 Bit    Registers := 2023  
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 10    
+	   6 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 4     
+	   3 Input    3 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   3 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 144   
+	   3 Input    1 Bit        Muxes := 6     
+	   6 Input    1 Bit        Muxes := 258   
+	   5 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP p_0_out, operation Mode is: A*(B:0x7642).
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP xcr_reg[5], operation Mode is: PCIN-A*(B:0x3cf04).
+DSP Report: register xcr_reg[5] is absorbed into DSP xcr_reg[5].
+DSP Report: operator p_1_out is absorbed into DSP xcr_reg[5].
+DSP Report: operator p_0_out is absorbed into DSP xcr_reg[5].
+DSP Report: Generating DSP p_0_out, operation Mode is: A*(B:0x5a82).
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP xcr_reg[6], operation Mode is: PCIN-A*(B:0x3a57e).
+DSP Report: register xcr_reg[6] is absorbed into DSP xcr_reg[6].
+DSP Report: operator p_1_out is absorbed into DSP xcr_reg[6].
+DSP Report: operator p_0_out is absorbed into DSP xcr_reg[6].
+DSP Report: Generating DSP p_0_out, operation Mode is: A*(B:0x30fc).
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP xcr_reg[7], operation Mode is: PCIN-A*(B:0x389be).
+DSP Report: register xcr_reg[7] is absorbed into DSP xcr_reg[7].
+DSP Report: operator p_1_out is absorbed into DSP xcr_reg[7].
+DSP Report: operator p_0_out is absorbed into DSP xcr_reg[7].
+DSP Report: Generating DSP p_0_out, operation Mode is: A*(B:0x5a82).
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP xcr_reg[9], operation Mode is: PCIN-A*(B:0x3a57e).
+DSP Report: register xcr_reg[9] is absorbed into DSP xcr_reg[9].
+DSP Report: operator p_1_out is absorbed into DSP xcr_reg[9].
+DSP Report: operator p_0_out is absorbed into DSP xcr_reg[9].
+DSP Report: Generating DSP p_0_out, operation Mode is: A*(B:0x3a57e).
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP xcr_reg[11], operation Mode is: PCIN-A*(B:0x3a57e).
+DSP Report: register xcr_reg[11] is absorbed into DSP xcr_reg[11].
+DSP Report: operator p_1_out is absorbed into DSP xcr_reg[11].
+DSP Report: operator p_0_out is absorbed into DSP xcr_reg[11].
+DSP Report: Generating DSP p_0_out, operation Mode is: A*(B:0x30fc).
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP xcr_reg[13], operation Mode is: PCIN-A*(B:0x389be).
+DSP Report: register xcr_reg[13] is absorbed into DSP xcr_reg[13].
+DSP Report: operator p_1_out is absorbed into DSP xcr_reg[13].
+DSP Report: operator p_0_out is absorbed into DSP xcr_reg[13].
+DSP Report: Generating DSP p_0_out, operation Mode is: A*(B:0x3a57e).
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP xcr_reg[14], operation Mode is: PCIN-A*(B:0x3a57e).
+DSP Report: register xcr_reg[14] is absorbed into DSP xcr_reg[14].
+DSP Report: operator p_1_out is absorbed into DSP xcr_reg[14].
+DSP Report: operator p_0_out is absorbed into DSP xcr_reg[14].
+DSP Report: Generating DSP p_0_out, operation Mode is: A*(B:0x389be).
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP xcr_reg[15], operation Mode is: PCIN-A*(B:0x30fc).
+DSP Report: register xcr_reg[15] is absorbed into DSP xcr_reg[15].
+DSP Report: operator p_1_out is absorbed into DSP xcr_reg[15].
+DSP Report: operator p_0_out is absorbed into DSP xcr_reg[15].
+DSP Report: Generating DSP p_0_out, operation Mode is: A*(B:0x3cf04).
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP xci_reg[5], operation Mode is: PCIN+A*(B:0x7642).
+DSP Report: register xci_reg[5] is absorbed into DSP xci_reg[5].
+DSP Report: operator p_1_out is absorbed into DSP xci_reg[5].
+DSP Report: operator p_0_out is absorbed into DSP xci_reg[5].
+DSP Report: Generating DSP p_0_out, operation Mode is: A*(B:0x389be).
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP xci_reg[7], operation Mode is: PCIN+A*(B:0x30fc).
+DSP Report: register xci_reg[7] is absorbed into DSP xci_reg[7].
+DSP Report: operator p_1_out is absorbed into DSP xci_reg[7].
+DSP Report: operator p_0_out is absorbed into DSP xci_reg[7].
+DSP Report: Generating DSP p_0_out, operation Mode is: A*(B:0x3a57e).
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP xci_reg[9], operation Mode is: PCIN+A*(B:0x5a82).
+DSP Report: register xci_reg[9] is absorbed into DSP xci_reg[9].
+DSP Report: operator p_1_out is absorbed into DSP xci_reg[9].
+DSP Report: operator p_0_out is absorbed into DSP xci_reg[9].
+DSP Report: Generating DSP xci_reg[11], operation Mode is: C+A*(B:0x3a57e).
+DSP Report: register xci_reg[11] is absorbed into DSP xci_reg[11].
+DSP Report: operator p_1_out is absorbed into DSP xci_reg[11].
+DSP Report: operator p_0_out is absorbed into DSP xci_reg[11].
+DSP Report: Generating DSP p_0_out, operation Mode is: A*(B:0x389be).
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP xci_reg[13], operation Mode is: PCIN+A*(B:0x30fc).
+DSP Report: register xci_reg[13] is absorbed into DSP xci_reg[13].
+DSP Report: operator p_1_out is absorbed into DSP xci_reg[13].
+DSP Report: operator p_0_out is absorbed into DSP xci_reg[13].
+DSP Report: Generating DSP p_0_out, operation Mode is: A*(B:0x30fc).
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP xci_reg[15], operation Mode is: PCIN+A*(B:0x389be).
+DSP Report: register xci_reg[15] is absorbed into DSP xci_reg[15].
+DSP Report: operator p_1_out is absorbed into DSP xci_reg[15].
+DSP Report: operator p_0_out is absorbed into DSP xci_reg[15].
+DSP Report: Generating DSP p_0_out, operation Mode is: A*(B:0x3a57e).
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP xci_reg[6], operation Mode is: PCIN+A*(B:0x5a82).
+DSP Report: register xci_reg[6] is absorbed into DSP xci_reg[6].
+DSP Report: operator p_1_out is absorbed into DSP xci_reg[6].
+DSP Report: operator p_0_out is absorbed into DSP xci_reg[6].
+DSP Report: Generating DSP xci_reg[14], operation Mode is: C+A*(B:0x3a57e).
+DSP Report: register xci_reg[14] is absorbed into DSP xci_reg[14].
+DSP Report: operator p_1_out is absorbed into DSP xci_reg[14].
+DSP Report: operator p_0_out is absorbed into DSP xci_reg[14].
+DSP Debug: swapped A/B pins for adder 000001A5B62DD960
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x2aab).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x5555).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+(C:0x800).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x2aab).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x5555).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+(C:0x800).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*(B:0x5555).
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x2aab).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+(C:0x800).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x2aab).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x5555).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+(C:0x800).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x2aab).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x5555).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+(C:0x800).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*(B:0x5555).
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x2aab).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x5555).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x2aab).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+(C:0x800).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x2aab).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x6000).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x5555).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+(C:0x800).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x2aab).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x5555).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x6000).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+(C:0x800).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*(B:0x2aab).
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x2aab).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x5555).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x5555).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+(C:0x800).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x2aab).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x6000).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x5555).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+(C:0x800).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x6000).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x6000).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+(C:0x800).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x6000).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x6000).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+(C:0x800).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x199a).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x3333).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x4ccd).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x6666).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x6000).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+(C:0x800).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x199a).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x6000).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x6666).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x4ccd).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x3333).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+(C:0x800).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x199a).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x3333).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x4ccd).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x6666).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x6000).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*(B:0x199a).
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x199a).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x3333).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x4ccd).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x6666).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x6666).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x4ccd).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x3333).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+(C:0x800).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*(B:0x1555).
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x199a).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x2aab).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x5555).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x6aab).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x6666).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x4ccd).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x3333).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+(C:0x800).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*(B:0x199a).
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x1555).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x3333).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x4ccd).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x6666).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x6aab).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x5555).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x2aab).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+(C:0x800).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*(B:0x1555).
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x199a).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x2aab).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x5555).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x6aab).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x6666).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x4ccd).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x3333).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+(C:0x800).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*(B:0x1249).
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x1555).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x2492).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x36db).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x4925).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x5b6e).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x6db7).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x6aab).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x5555).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x2aab).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+(C:0x800).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*(B:0x1249).
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x1249).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x2492).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x36db).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x4925).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x5b6e).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x6db7).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x6db7).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x5b6e).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x4925).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x36db).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x2492).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+(C:0x800).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*(B:0x6db7).
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*(B:0x1249).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x5b6e).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x4925).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x36db).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*(B:0x2492).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+(C:0x800).
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP result3, operation Mode is: (C:0x4000)+(A:0x3fff9986)*B.
+DSP Report: operator result3 is absorbed into DSP result3.
+DSP Report: operator result4 is absorbed into DSP result3.
+DSP Report: Generating DSP result3, operation Mode is: (C:0x4000)+A*(B:0x333d).
+DSP Report: operator result3 is absorbed into DSP result3.
+DSP Report: operator result4 is absorbed into DSP result3.
+DSP Report: Generating DSP result3, operation Mode is: (C:0x4000)+(A:0x3fff9c19)*B.
+DSP Report: operator result3 is absorbed into DSP result3.
+DSP Report: operator result4 is absorbed into DSP result3.
+DSP Report: Generating DSP result3, operation Mode is: (C:0x4000)+A*(B:0x290d).
+DSP Report: operator result3 is absorbed into DSP result3.
+DSP Report: operator result4 is absorbed into DSP result3.
+DSP Report: Generating DSP result3, operation Mode is: (C:0x4000)+A*(B:0x333d).
+DSP Report: operator result3 is absorbed into DSP result3.
+DSP Report: operator result4 is absorbed into DSP result3.
+WARNING: [Synth 8-3936] Found unconnected internal register 'inst1/dithered_data_reg' and it is trimmed from '25' to '24' bits. [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/codec.sv:39]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_1/fft_1_done_reg/Q' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/top.sv:84]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/top.sv:84]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.srcs/sources_1/new/top.sv:84]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:01:13 . Memory (MB): peak = 1567.430 ; gain = 1023.934
+---------------------------------------------------------------------------------
+ Sort Area is top__GCB0 p_1_out_44 : 0 0 : 835 10789 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_44 : 0 1 : 919 10789 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_44 : 0 2 : 919 10789 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_44 : 0 3 : 1031 10789 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_44 : 0 4 : 1031 10789 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_44 : 0 5 : 1031 10789 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_44 : 0 6 : 1031 10789 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_44 : 0 7 : 1031 10789 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_44 : 0 8 : 1031 10789 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_44 : 0 9 : 919 10789 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_44 : 0 10 : 919 10789 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_44 : 0 11 : 92 10789 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_42 : 0 0 : 835 8839 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_42 : 0 1 : 919 8839 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_42 : 0 2 : 919 8839 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_42 : 0 3 : 1031 8839 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_42 : 0 4 : 1031 8839 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_42 : 0 5 : 1031 8839 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_42 : 0 6 : 1031 8839 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_42 : 0 7 : 1031 8839 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_42 : 0 8 : 919 8839 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_42 : 0 9 : 92 8839 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_38 : 0 0 : 835 6889 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_38 : 0 1 : 919 6889 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_38 : 0 2 : 1031 6889 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_38 : 0 3 : 1031 6889 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_38 : 0 4 : 1031 6889 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_38 : 0 5 : 1031 6889 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_38 : 0 6 : 919 6889 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_38 : 0 7 : 92 6889 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_3d : 0 0 : 835 6889 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_3d : 0 1 : 919 6889 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_3d : 0 2 : 1031 6889 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_3d : 0 3 : 1031 6889 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_3d : 0 4 : 1031 6889 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_3d : 0 5 : 1031 6889 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_3d : 0 6 : 919 6889 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_3d : 0 7 : 92 6889 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_34 : 0 0 : 919 5484 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_34 : 0 1 : 1031 5484 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_34 : 0 2 : 1178 5484 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_34 : 0 3 : 1178 5484 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_34 : 0 4 : 1178 5484 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_30 : 0 0 : 835 4939 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_30 : 0 1 : 919 4939 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_30 : 0 2 : 1031 4939 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_30 : 0 3 : 1031 4939 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_30 : 0 4 : 1031 4939 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_30 : 0 5 : 92 4939 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_46 : 0 0 : 835 4827 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_46 : 0 1 : 1031 4827 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_46 : 0 2 : 1031 4827 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_46 : 0 3 : 919 4827 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_46 : 0 4 : 919 4827 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_46 : 0 5 : 92 4827 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_3b : 0 0 : 283 4387 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_3b : 0 1 : 1031 4387 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_3b : 0 2 : 1031 4387 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_3b : 0 3 : 1031 4387 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_3b : 0 4 : 919 4387 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_3b : 0 5 : 92 4387 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_40 : 0 0 : 283 4387 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_40 : 0 1 : 1031 4387 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_40 : 0 2 : 1031 4387 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_40 : 0 3 : 1031 4387 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_40 : 0 4 : 919 4387 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_40 : 0 5 : 92 4387 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_33 : 0 0 : 283 3356 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_33 : 0 1 : 1031 3356 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_33 : 0 2 : 1031 3356 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_33 : 0 3 : 919 3356 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_33 : 0 4 : 92 3356 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_28 : 0 0 : 919 3073 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_28 : 0 1 : 1031 3073 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_28 : 0 2 : 1031 3073 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_28 : 0 3 : 92 3073 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_2b : 0 0 : 919 3073 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_2b : 0 1 : 1031 3073 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_2b : 0 2 : 1031 3073 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_2b : 0 3 : 92 3073 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_23 : 0 0 : 919 2961 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_23 : 0 1 : 1031 2961 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_23 : 0 2 : 919 2961 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_23 : 0 3 : 92 2961 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_3 : 0 0 : 851 2254 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_3 : 0 1 : 1403 2254 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_8 : 0 0 : 851 2254 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_8 : 0 1 : 1403 2254 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_9 : 0 0 : 851 2254 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_9 : 0 1 : 1403 2254 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_b : 0 0 : 851 2254 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_b : 0 1 : 1403 2254 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_19 : 0 0 : 919 2042 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_19 : 0 1 : 1031 2042 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_19 : 0 2 : 92 2042 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_1d : 0 0 : 919 2042 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_1d : 0 1 : 1031 2042 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_1d : 0 2 : 92 2042 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_20 : 0 0 : 919 2042 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_20 : 0 1 : 1031 2042 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_20 : 0 2 : 92 2042 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_21 : 0 0 : 919 2042 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_21 : 0 1 : 1031 2042 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_21 : 0 2 : 92 2042 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_0 : 0 0 : 807 1976 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_0 : 0 1 : 1169 1976 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_c : 0 0 : 807 1976 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_c : 0 1 : 1169 1976 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_6 : 0 0 : 851 1967 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_6 : 0 1 : 1116 1967 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_a : 0 0 : 851 1967 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_a : 0 1 : 1116 1967 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_13 : 0 0 : 851 1829 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_13 : 0 1 : 978 1829 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_17 : 0 0 : 851 1829 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_17 : 0 1 : 978 1829 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_15 : 0 0 : 807 1803 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_15 : 0 1 : 996 1803 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_f : 0 0 : 807 1803 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_f : 0 1 : 996 1803 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_16 : 0 0 : 851 1787 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_16 : 0 1 : 936 1787 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_d : 0 0 : 851 1787 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_d : 0 1 : 936 1787 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_3a : 0 0 : 835 1754 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_3a : 0 1 : 919 1754 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_3f : 0 0 : 835 1754 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_3f : 0 1 : 919 1754 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_26 : 0 0 : 283 1406 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_26 : 0 1 : 1031 1406 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_26 : 0 2 : 92 1406 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_2d : 0 0 : 283 1406 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_2d : 0 1 : 1031 1406 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_2d : 0 2 : 92 1406 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_2e : 0 0 : 283 1406 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_2e : 0 1 : 1031 1406 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_2e : 0 2 : 92 1406 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_2f : 0 0 : 283 1406 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_2f : 0 1 : 1031 1406 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_2f : 0 2 : 92 1406 : Used 1 time 0
+ Sort Area is top__GCB0 xci_reg[11]_11 : 0 0 : 1276 1276 : Used 1 time 0
+ Sort Area is top__GCB0 xci_reg[14]_18 : 0 0 : 1276 1276 : Used 1 time 0
+ Sort Area is top__GCB1 result3_47 : 0 0 : 1119 1119 : Used 1 time 0
+ Sort Area is top__GCB1 result3_49 : 0 0 : 1119 1119 : Used 1 time 0
+ Sort Area is top__GCB1 result3_4c : 0 0 : 1119 1119 : Used 1 time 0
+ Sort Area is top__GCB1 result3_4a : 0 0 : 1013 1013 : Used 1 time 0
+ Sort Area is top__GCB1 result3_4d : 0 0 : 1013 1013 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_1f : 0 0 : 919 1011 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_1f : 0 1 : 92 1011 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_25 : 0 0 : 919 919 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_2c : 0 0 : 919 919 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_29 : 0 0 : 836 836 : Used 1 time 0
+ Sort Area is top__GCB0 p_1_out_32 : 0 0 : 835 835 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_1e : 0 0 : 807 807 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_22 : 0 0 : 807 807 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_45 : 0 0 : 807 807 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_36 : 0 0 : 752 752 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_39 : 0 0 : 752 752 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_3c : 0 0 : 752 752 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_3e : 0 0 : 752 752 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_41 : 0 0 : 752 752 : Used 1 time 0
+ Sort Area is top__GCB0 p_0_out_43 : 0 0 : 752 752 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++----------------+-----------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name     | DSP Mapping                 | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++----------------+-----------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fft_2           | A*(B:0x7642)                | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_2           | PCIN-A*(B:0x3cf04)          | 16     | 15     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fft_2           | A*(B:0x5a82)                | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_2           | PCIN-A*(B:0x3a57e)          | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fft_2           | A*(B:0x30fc)                | 16     | 15     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_2           | PCIN-A*(B:0x389be)          | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fft_2           | A*(B:0x5a82)                | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_2           | PCIN-A*(B:0x3a57e)          | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fft_2           | A*(B:0x3a57e)               | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_2           | PCIN-A*(B:0x3a57e)          | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fft_2           | A*(B:0x30fc)                | 16     | 15     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_2           | PCIN-A*(B:0x389be)          | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fft_2           | A*(B:0x3a57e)               | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_2           | PCIN-A*(B:0x3a57e)          | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fft_2           | A*(B:0x389be)               | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_2           | PCIN-A*(B:0x30fc)           | 16     | 15     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fft_2           | A*(B:0x3cf04)               | 16     | 15     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_2           | PCIN+A*(B:0x7642)           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fft_2           | A*(B:0x389be)               | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_2           | PCIN+A*(B:0x30fc)           | 16     | 15     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fft_2           | A*(B:0x3a57e)               | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_2           | PCIN+A*(B:0x5a82)           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fft_2           | C+A*(B:0x3a57e)             | 16     | 16     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|fft_2           | A*(B:0x389be)               | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_2           | PCIN+A*(B:0x30fc)           | 16     | 15     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fft_2           | A*(B:0x30fc)                | 16     | 15     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_2           | PCIN+A*(B:0x389be)          | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fft_2           | A*(B:0x3a57e)               | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_2           | PCIN+A*(B:0x5a82)           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fft_2           | C+A*(B:0x3a57e)             | 16     | 16     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|mel_filter_bank | C+A*(B:0x2aab)              | 16     | 14     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x5555)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top             | PCIN+(A:0x0):B+(C:0x800)    | 30     | 16     | 12     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | C+A*(B:0x2aab)              | 16     | 14     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x5555)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top             | PCIN+(A:0x0):B+(C:0x800)    | 30     | 16     | 12     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | A*(B:0x5555)                | 16     | 15     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | C+A*(B:0x2aab)              | 16     | 14     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|top             | PCIN+(A:0x0):B+(C:0x800)    | 30     | 16     | 12     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | C+A*(B:0x2aab)              | 16     | 14     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x5555)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top             | PCIN+(A:0x0):B+(C:0x800)    | 30     | 16     | 12     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | C+A*(B:0x2aab)              | 16     | 14     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x5555)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top             | PCIN+(A:0x0):B+(C:0x800)    | 30     | 16     | 12     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | A*(B:0x5555)                | 16     | 15     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | C+A*(B:0x2aab)              | 16     | 14     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x5555)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x2aab)           | 16     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top             | PCIN+(A:0x0):B+(C:0x800)    | 30     | 16     | 12     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | C+A*(B:0x2aab)              | 16     | 14     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | C+A*(B:0x6000)              | 16     | 15     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x5555)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top             | PCIN+(A:0x0):B+(C:0x800)    | 30     | 16     | 12     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | C+A*(B:0x2aab)              | 16     | 14     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x5555)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x6000)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top             | PCIN+(A:0x0):B+(C:0x800)    | 30     | 16     | 12     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | A*(B:0x2aab)                | 16     | 14     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | C+A*(B:0x2aab)              | 16     | 14     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x5555)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x5555)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top             | PCIN+(A:0x0):B+(C:0x800)    | 30     | 16     | 12     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | C+A*(B:0x2aab)              | 16     | 14     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | C+A*(B:0x6000)              | 16     | 15     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x5555)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top             | PCIN+(A:0x0):B+(C:0x800)    | 30     | 16     | 12     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | C+A*(B:0x6000)              | 16     | 15     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x6000)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top             | PCIN+(A:0x0):B+(C:0x800)    | 30     | 16     | 12     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | C+A*(B:0x6000)              | 16     | 15     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x6000)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top             | PCIN+(A:0x0):B+(C:0x800)    | 30     | 16     | 12     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | C+A*(B:0x199a)              | 16     | 13     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x3333)           | 16     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x4ccd)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x6666)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x6000)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top             | PCIN+(A:0x0):B+(C:0x800)    | 30     | 16     | 12     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | C+A*(B:0x199a)              | 16     | 13     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | C+A*(B:0x6000)              | 16     | 15     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x6666)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x4ccd)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x3333)           | 16     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top             | PCIN+(A:0x0):B+(C:0x800)    | 30     | 16     | 12     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | C+A*(B:0x199a)              | 16     | 14     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x3333)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x4ccd)           | 16     | 16     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x6666)           | 16     | 16     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x6000)           | 16     | 16     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | A*(B:0x199a)                | 16     | 13     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | C+A*(B:0x199a)              | 16     | 13     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x3333)           | 16     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x4ccd)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x6666)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x6666)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x4ccd)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x3333)           | 16     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top             | PCIN+(A:0x0):B+(C:0x800)    | 30     | 16     | 12     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | A*(B:0x1555)                | 16     | 13     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | C+A*(B:0x199a)              | 16     | 13     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x2aab)           | 16     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | C+A*(B:0x5555)              | 16     | 15     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x6aab)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x6666)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x4ccd)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x3333)           | 16     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top             | PCIN+(A:0x0):B+(C:0x800)    | 30     | 16     | 12     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | A*(B:0x199a)                | 16     | 13     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | C+A*(B:0x1555)              | 16     | 13     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x3333)           | 16     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x4ccd)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x6666)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x6aab)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x5555)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x2aab)           | 16     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top             | PCIN+(A:0x0):B+(C:0x800)    | 30     | 16     | 12     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | A*(B:0x1555)                | 16     | 13     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | C+A*(B:0x199a)              | 16     | 13     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x2aab)           | 16     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | C+A*(B:0x5555)              | 16     | 15     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x6aab)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x6666)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x4ccd)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x3333)           | 16     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top             | PCIN+(A:0x0):B+(C:0x800)    | 30     | 16     | 12     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | A*(B:0x1249)                | 16     | 13     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | C+A*(B:0x1555)              | 16     | 13     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x2492)           | 16     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x36db)           | 16     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x4925)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x5b6e)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x6db7)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x6aab)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x5555)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x2aab)           | 16     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top             | PCIN+(A:0x0):B+(C:0x800)    | 30     | 16     | 12     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | A*(B:0x1249)                | 16     | 13     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | C+A*(B:0x1249)              | 16     | 13     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x2492)           | 16     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x36db)           | 16     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x4925)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x5b6e)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x6db7)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x6db7)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x5b6e)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x4925)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x36db)           | 16     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x2492)           | 16     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top             | PCIN+(A:0x0):B+(C:0x800)    | 30     | 16     | 12     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | A*(B:0x6db7)                | 16     | 15     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | C+A*(B:0x1249)              | 16     | 13     | 28     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x5b6e)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x4925)           | 16     | 15     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x36db)           | 16     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mel_filter_bank | PCIN+A*(B:0x2492)           | 16     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top             | PCIN+(A:0x0):B+(C:0x800)    | 30     | 16     | 12     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|preprocessing   | (C:0x4000)+(A:0x3fff9986)*B | 16     | 16     | 16     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|preprocessing   | (C:0x4000)+A*(B:0x333d)     | 16     | 15     | 16     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|preprocessing   | (C:0x4000)+(A:0x3fff9c19)*B | 16     | 16     | 16     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|preprocessing   | (C:0x4000)+A*(B:0x290d)     | 16     | 15     | 16     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|preprocessing   | (C:0x4000)+A*(B:0x333d)     | 16     | 15     | 16     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++----------------+-----------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:01:13 . Memory (MB): peak = 1577.703 ; gain = 1034.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:01:13 . Memory (MB): peak = 1577.703 ; gain = 1034.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:52 ; elapsed = 00:01:18 . Memory (MB): peak = 1577.703 ; gain = 1034.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:52 ; elapsed = 00:01:18 . Memory (MB): peak = 1577.703 ; gain = 1034.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:01:18 . Memory (MB): peak = 1577.703 ; gain = 1034.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:01:18 . Memory (MB): peak = 1577.703 ; gain = 1034.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:01:18 . Memory (MB): peak = 1577.703 ; gain = 1034.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:52 ; elapsed = 00:01:18 . Memory (MB): peak = 1577.703 ; gain = 1034.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |OBUF |   417|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   417|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:52 ; elapsed = 00:01:18 . Memory (MB): peak = 1577.703 ; gain = 1034.207
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 3 critical warnings and 306 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:52 ; elapsed = 00:01:18 . Memory (MB): peak = 1577.703 ; gain = 1034.207
+Synthesis Optimization Complete : Time (s): cpu = 00:00:52 ; elapsed = 00:01:18 . Memory (MB): peak = 1577.703 ; gain = 1034.207
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1589.754 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1593.406 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 7b1435a4
+INFO: [Common 17-83] Releasing license: Synthesis
+36 Infos, 166 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:01:20 . Memory (MB): peak = 1593.406 ; gain = 1057.176
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1593.406 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/adity/Desktop/vivado_ws/MFCC_final_project/MFCC_final_project.runs/synth_1/top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 11 12:48:03 2025...
